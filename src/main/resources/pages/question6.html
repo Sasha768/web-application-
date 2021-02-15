@@ -1,0 +1,74 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        h1 {
+            color: darkturquoise;
+        }
+
+        .styled-table {
+            align-content: center;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 150px;
+        }
+
+        styled -table thead tr {
+            background-color: #009879;
+            text-align: center;
+        }
+
+        tr:hover td {
+            background: green;
+            border-collapse: collapse;
+        }
+
+        .styled-table td {
+            padding: 18px 18px;
+        }
+
+        .styled-table tbody tr {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<div align="center">
+    <form action="/answer6" method="post">
+        <h2 th:text=" ${question} + '?'"></h2>
+        <table class ="styled-table">
+            <tr>
+                <td>1</td>
+                <td><input name="answer" type="radio" value="left">left</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input name="answer" type="radio" value="right">right</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input name="answer" type="radio" value="center">center</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><input name="answer" type="radio" value="top">top</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><input name="answer" type="radio" value="down">down</td>
+            </tr>
+        </table>
+
+        <input type="submit" value="next" class="btn btn-primary">
+    </form>
+</div>
+
+</body>
+</html>
